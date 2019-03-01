@@ -41,6 +41,6 @@ def dummy_endpoint():
     return jsonify({ 'data': 'Server running' }), 200
 
 if __name__ == '__main__':
-    LOG.info('running environment: %s', os.environ.get('ENV'))
+    LOG.info('Server is running on environment: %s', os.environ.get('ENV'))
     app.config['DEBUG'] = os.environ.get('ENV') == 'development'
     app.run(host='0.0.0.0', port=int(PORT))
