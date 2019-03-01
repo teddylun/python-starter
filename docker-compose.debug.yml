@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  python_starter:
+    image: python
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/app
+    environment:
+      - ENV=development
+      - PORT=5000
